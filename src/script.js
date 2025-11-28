@@ -41,7 +41,7 @@ function goToSlide(index) {
 
 setInterval(() => {
   moveSlide(1);
-}, 5000);
+}, 3000);
 
 updateDots();
 
@@ -112,3 +112,106 @@ document.addEventListener("DOMContentLoaded", function () {
 
   header.style.transition = "transform 0.3s ease-in-out";
 });
+
+const selectionModels = document.getElementById("selection-models");
+const cars = document.getElementById("cars");
+
+const carss = [
+  {
+    category: "bmw s1",
+    img: "https://images.pexels.com/photos/29580162/pexels-photo-29580162.jpeg",
+    title: "BMW Sport S1",
+    price: "100,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw s1",
+    img: "https://images.pexels.com/photos/25691078/pexels-photo-25691078.png",
+    title: "BMW class S1",
+    price: "10,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw s1",
+    img: "https://images.pexels.com/photos/29580174/pexels-photo-29580174.jpeg",
+    title: "BMW Flagship",
+    price: "50,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw x2",
+    img: "https://images.pexels.com/photos/29098232/pexels-photo-29098232.jpeg",
+    title: "BMW Executive",
+    price: "500,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw x2",
+    img: "https://images.pexels.com/photos/7154531/pexels-photo-7154531.jpeg",
+    title: "BMW Executive Class",
+    price: "500,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw x2",
+    img: "https://images.pexels.com/photos/9411660/pexels-photo-9411660.jpeg",
+    title: "BMW Sports Activity",
+    price: "505,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw x5",
+    img: "https://images.pexels.com/photos/14776716/pexels-photo-14776716.jpeg",
+    title: "BMW x5 class",
+    price: "600,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw x5",
+    img: "https://images.pexels.com/photos/12175734/pexels-photo-12175734.jpeg",
+    title: "BMW X5 Class Man",
+    price: "300,000$",
+    add: "Buying"
+  },
+
+  {
+    category: "bmw x5",
+    img: "https://images.pexels.com/photos/18688742/pexels-photo-18688742.jpeg",
+    title: "BMW X5 Sport",
+    price: "700,000$",
+    add: "Buying"
+  },
+];
+
+
+function selectorCars(str) {
+  const current = str === "all"
+  ?carss
+  :carss.filter(car => car.category === str);
+  return current
+    .map(car => {
+      return `
+        <div class="car-card bg-white rounded-lg shadow-md p-4 gap-8 w-[500px] shadow-lg">
+          <img src="${car.img}" alt="${car.title}" class="w-full h-48 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-x-75">
+          <div class="flex justify-between p-2 items-center ">
+            <h3 class="text-xl font-bold text-black">${car.title}</h3>
+            <span class="text-lg text-red-500">${car.price}</span>
+          </div>
+          <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">${car.add}</button>
+        </div>
+      `;
+    }).join("");
+};
+
+selectionModels.addEventListener("change", () => {
+    cars.innerHTML = selectorCars(selectionModels.value);
+});
+
+cars.innerHTML = selectorCars("all");

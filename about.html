@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BMW Showcase Store</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1665378495650-8bfd148153c1?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="flex justify-between items-center bg-black/80 backdrop-blur-md px-6 py-4 w-[93%] max-w-6xl mx-auto mt-5 rounded-xl sticky top-5 z-50 shadow-lg shadow-black"
+    >
+      <div class="flex justify-between items-center gap-2">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png"
+          alt="Logo BMW"
+          class="w-10 drop-shadow-md"
+          loading="lazy"
+        />
+        <h1 class="text-2xl font-bold text-white">BMW</h1>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuToggle" class="lg:hidden text-white z-30">
+        <svg
+          id="hamburgerIcon"
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <svg
+          id="closeIcon"
+          class="w-8 h-8 hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+
+      <nav
+        id="navMenu"
+        class="hidden lg:flex absolute w-full left-0.5 lg:static top-20 lg:top-auto right-6 lg:right-auto w-auto lg:w-auto text-center lg:text-left bg-black/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none rounded-xl lg:rounded-none p-6 lg:p-0 shadow-xl lg:shadow-none"
+      >
+        <ul
+          class="flex lg:flex-row flex-col gap-6 text-white font-medium items-center"
+        >
+          <li>
+            <a
+              class="text-lg font-bold pb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[5px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
+              href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-lg font-bold pb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[5px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
+              href="models.html"
+              >Models</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-lg font-bold pb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[5px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
+              href="about.html"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <button
+              class="bg-white text-white p-3 rounded-full hover:bg-blue-700 transition"
+            >
+              <img src="image/basket.svg" alt="Add to cart" class="w-5 h-5" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="hero-section w-full h-screen mt-[-100px] flex flex-col items-center justify-center"
+    >
+      <div class="text-center px-4">
+        <h2
+          class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6"
+          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6)"
+        >
+          BM<span class="text-blue-500">W</span>
+        </h2>
+        <div class="flex justify-center">
+          <a href="#about">
+            <button
+              class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 duration-500 hover:bg-neutral-900"
+            >
+              <div
+                class="translate-x-0 opacity-100 transition group-hover:-translate-x-[150%] group-hover:opacity-0"
+              >
+                About Us
+              </div>
+              <div
+                class="absolute translate-x-[150%] opacity-0 transition group-hover:translate-x-0 group-hover:opacity-100"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                >
+                  <path
+                    d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main class="w-full" id="about">
+      <section class="bg-white py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">About BMW</h2>
+          <p class="text-lg text-gray-600 mb-8">
+            BMW (Bayerische Motoren Werke AG) is a leading German automobile
+            manufacturer founded in 1916. The company is known for producing
+            high-performance luxury cars, motorcycles, and electric vehicles.
+            With a strong commitment to innovation, quality, and sustainability,
+            BMW has become a global symbol of precision engineering and driving
+            pleasure.
+          </p>
+
+          <div class="lg:flex justify-around">
+            <div class="lg:w-1/3 mb-6 lg:mb-0">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Our History
+              </h3>
+              <p class="text-lg text-gray-600">
+                Originally founded as an aircraft engine manufacturer, BMW
+                transitioned to building automobiles and motorcycles after World
+                War I. The first BMW car, the BMW 3/15, was produced in 1928.
+                Over the decades, BMW has expanded its range, incorporating
+                cutting-edge technology and luxury design.
+              </p>
+            </div>
+
+            <div class="lg:w-1/3 mb-6 lg:mb-0">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Innovation & Sustainability
+              </h3>
+              <p class="text-lg text-gray-600">
+                BMW is dedicated to the future of mobility, focusing on
+                sustainable production processes, electrification, and
+                autonomous driving technologies. The brand's electric vehicles,
+                like the BMW i3 and i8, reflect BMW's vision for a more
+                eco-friendly and innovative future.
+              </p>
+            </div>
+
+            <div class="lg:w-1/3">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                The Ultimate Driving Machine
+              </h3>
+              <p class="text-lg text-gray-600">
+                BMW's famous slogan, "The Ultimate Driving Machine," represents
+                the brand's commitment to delivering an unmatched driving
+                experience. Every BMW vehicle is engineered for performance,
+                safety, and luxury, ensuring that customers enjoy a unique and
+                thrilling experience on the road.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <a
+              href="models.html"
+              class="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition"
+            >
+              Explore Our Models
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full flex justify-between items-center gap-5">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-[500px] h-full object-cover"
+        >
+          <source src="image/vs.mp4" type="video/mp4" />
+        </video>
+        <p>
+          BMW is renowned for its exceptional quality, setting the standard in
+          the luxury automobile market. With a reputation built on precision
+          engineering and superior craftsmanship, BMW vehicles are designed to
+          provide not only a dynamic driving experience but also unmatched
+          durability and reliability. The brand uses high-grade materials like
+          high-strength steel and aluminum to ensure structural integrity, while
+          also focusing on premium interiors with high-end finishes and
+          cutting-edge technology. The performance of a BMW is equally
+          impressive. Each car is equipped with advanced powertrains and
+          suspension systems that offer a perfect balance of comfort and
+          handling, making driving a BMW an exhilarating experience. The brand’s
+          focus on innovation is evident in its introduction of electric and
+          hybrid vehicles, combining luxury with sustainability. Overall, BMW is
+          synonymous with excellence, and its vehicles are built to last,
+          maintaining their value and appeal over time. Whether it’s a sedan,
+          coupe, or SUV, owning a BMW means experiencing the pinnacle of
+          automotive engineering, comfort, and style.
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-6 w-full mt-5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h2 class="text-3xl font-bold mb-4">BMW</h2>
+            <p class="text-gray-400 mb-4">
+              Driving luxury and performance since 1916. Experience the ultimate
+              driving machine.
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Models</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >BMW 3 Series</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >BMW 5 Series</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >BMW 7 Series</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >BMW X Series</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >BMW M Series</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >BMW i Series</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="models.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Models</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="order.html"
+                  class="text-gray-400 hover:text-white transition-colors duration-300"
+                  >Order</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to get latest updates and offers.
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-6">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-gray-400 text-sm">
+              © 2025 BMW. All rights reserved.
+            </p>
+
+            <div class="flex gap-6 text-sm">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors duration-300"
+                >Cookie Settings</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="src/script.js"></script>
+  </body>
+</html>

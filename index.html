@@ -10,16 +10,16 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
-body {
-  font-family: "Inter", sans-serif;
-}
+      body {
+        font-family: "Inter", sans-serif;
+      }
 
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url("https://images.unsplash.com/photo-1600268330186-76564be81357?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
-}
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1600268330186-76564be81357?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+      }
     </style>
   </head>
   <body class="p-0 m-0 bg-gray-50">
@@ -73,7 +73,9 @@ body {
         id="navMenu"
         class="hidden lg:flex absolute w-full left-0.5 lg:static top-20 lg:top-auto right-6 lg:right-auto w-auto lg:w-auto text-center lg:text-left bg-black/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none rounded-xl lg:rounded-none p-6 lg:p-0 shadow-xl lg:shadow-none"
       >
-        <ul class="flex lg:flex-row flex-col gap-6 text-white font-medium">
+        <ul
+          class="flex lg:flex-row flex-col gap-6 text-white font-medium items-center"
+        >
           <li>
             <a
               class="text-lg font-bold pb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[5px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
@@ -96,11 +98,11 @@ body {
             >
           </li>
           <li>
-            <a
-              class="text-lg font-bold pb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[5px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
-              href="order.html"
-              >Order</a
+            <button
+              class="bg-white text-white p-3 rounded-full hover:bg-blue-700 transition"
             >
+              <img src="image/basket.svg" alt="Add to cart" class="w-5 h-5" />
+            </button>
           </li>
         </ul>
       </nav>
@@ -266,7 +268,6 @@ body {
           <div
             class="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"
           ></div>
-
 
           <!-- Dots indicator -->
           <div
@@ -521,28 +522,28 @@ body {
             <ul class="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="index.html"
                   class="text-gray-400 hover:text-white transition-colors duration-300"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  href="#models"
+                  href="models.html"
                   class="text-gray-400 hover:text-white transition-colors duration-300"
                   >Models</a
                 >
               </li>
               <li>
                 <a
-                  href="#about"
+                  href="about.html"
                   class="text-gray-400 hover:text-white transition-colors duration-300"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="order.html"
                   class="text-gray-400 hover:text-white transition-colors duration-300"
                   >Order</a
                 >

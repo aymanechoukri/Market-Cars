@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Models Cars</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
     <title>BMW Showcase Store</title>
     <link rel="stylesheet" href="styles.css" />
 
@@ -71,9 +71,11 @@
 
       <nav
         id="navMenu"
-        class="hidden lg:flex absolute w-full left-0.5 lg:static top-20 lg:top-auto right-6 lg:right-auto w-auto lg:w-auto text-center lg:text-left bg-black/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none rounded-xl lg:rounded-none p-6 lg:p-0 shadow-xl lg:shadow-none"
+        class="hidden lg:flex absolute lg:static top-20 lg:top-auto left-0 lg:left-auto right-6 lg:right-auto w-full lg:w-auto text-center lg:text-left bg-black/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none rounded-xl lg:rounded-lg  p-6 lg:p-0 shadow-xl lg:shadow-none"
       >
-        <ul class="flex lg:flex-row flex-col gap-6 text-white font-medium items-center">
+        <ul
+          class="flex lg:flex-row flex-col gap-6 text-white font-medium items-center"
+        >
           <li>
             <a
               class="text-lg font-bold pb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[5px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
@@ -97,6 +99,7 @@
           </li>
           <li>
             <button
+              id="basket"
               class="bg-white text-white p-3 rounded-full hover:bg-blue-700 transition"
             >
               <img src="image/basket.svg" alt="Add to cart" class="w-5 h-5" />
@@ -105,6 +108,22 @@
         </ul>
       </nav>
     </header>
+
+    <div
+      id="popap"
+      class="w-full h-full overflow-y-auto fixed left-0 top-0 bg-white z-40"
+      hidden
+    >
+    <div class="flex justify-end items-center mt-40">
+      <div id="add-basket" class="flex items-center justify-center gap-10 flex-wrap flex-row"></div>
+      <button
+        id="closebtn"
+        class="text-2xl mt-0 mr-5 bg-black text-white px-2 rounded-md hover:bg-gray-500"
+      >
+        x
+      </button>
+      </div>
+    </div>
     <!-- Hero Section -->
     <section
       class="hero-section w-full h-screen mt-[-100px] flex flex-col items-center justify-center"
